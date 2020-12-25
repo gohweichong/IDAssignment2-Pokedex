@@ -1,5 +1,6 @@
 let url = 'https://pokeapi.co/api/v2/pokedex/';
 
+
 //create a pokemon function
 function Pokemon(name, hp, attack, defense, spattack, spdefense, speed, type, ability){
     this.name = name;
@@ -51,6 +52,7 @@ $(function () { //shorthand for jquery document ready
                     let id = data.pokedex_numbers[0].entry_number;
                     console.log(id);
                     url4 = `https://pokeapi.co/api/v2/pokemon/${id}/`;
+                    localStorage.setItem('url', url4);
 
                     fetch(url4)
                     .then(response => response.json()) 
@@ -90,8 +92,9 @@ $(function () { //shorthand for jquery document ready
                         console.log(type);
                         console.log(ability);
                      
-                        var p = `<li class=pokebox><p>‏‏‎‏‏‎ ‎ ${id}. ${mname}</p><p><img src=${data.sprites.front_default} alt="sprite"></p></li>`
+                        var p = `<li class=pokebox><p>‏‏‎‏‏‎ ‎ ${id}. ${mname}</p><p><a href="pages/pokestats.html"><img src=${data.sprites.front_default} alt="sprite"></a></p></li>`
                         $('ul').after(p);
+                        localStorage.setItem('pokemon', JSON.stringify(pokemon));
                     });
                 });
             });

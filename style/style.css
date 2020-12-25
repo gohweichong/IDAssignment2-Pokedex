@@ -1,8 +1,11 @@
-body {
+.background{
     background-image: url('../images/pokeball-background.jpg');
     background-attachment: fixed;
     background-size: 50% 100%;
-  }
+}
+.background2{
+    background-color: rgb(255, 255, 255);
+}
 header {
     background-image: url('../images/pokemon-background.jpg');
     background-attachment: fixed;
@@ -87,7 +90,6 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width:500px;
     height:auto;
 }
 .btn-primary{
@@ -111,6 +113,7 @@ header {
 .icontainer{
     display:flex;
     flex-direction: row;
+    justify-content:center;
 }
 .clear{
     display: block;
@@ -120,4 +123,15 @@ header {
     border-radius: 5px;
     color:white;
     background-color:rgb(46, 118, 167);
+}
+.center-sprite{
+    width:30%;
+    height:auto;
+}
+.pokeborder{
+    border: 5px solid  rgb(182, 167, 101);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
 }
