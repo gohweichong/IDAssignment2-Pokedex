@@ -38,7 +38,7 @@ $(function () { //shorthand for jquery document ready
                 for(let t = 0; t < data.pokemon_entries.length - 1; t++){
                     let poke_name = data.pokemon_entries[t].pokemon_species.name;
                     let poke_no = data.pokemon_entries[t].entry_number;
-                    if(name == poke_name || name == poke_no){
+                    if(name.toLowerCase() == poke_name || name == poke_no){
                         console.log(poke_name);
                         url3 = data.pokemon_entries[t].pokemon_species.url;
                     }
@@ -92,7 +92,7 @@ $(function () { //shorthand for jquery document ready
                         console.log(type);
                         console.log(ability);
                      
-                        var p = `<li class=pokebox><p>‏‏‎‏‏‎ ‎ ${id}. ${mname}</p><p><a href="pages/pokestats.html"><img src=${data.sprites.front_default} alt="sprite"></a></p></li>`
+                        var p = `<li class=pokebox><p>‏‏‎‏‏‎ ‎ ${id}. ${mname[0].toUpperCase()}${mname.slice(1)}</p><p><a href="pages/pokestats.html"><img src=${data.sprites.front_default} alt="sprite"></a></p></li>`
                         $('ul').after(p);
                         localStorage.setItem('pokemon', JSON.stringify(pokemon));
                     });

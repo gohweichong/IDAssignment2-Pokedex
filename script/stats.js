@@ -13,19 +13,31 @@ fetch(url)
         let spattack = data.stats[3].base_stat;
         let spdefense = data.stats[4].base_stat;
         let speed = data.stats[5].base_stat;
+        var weight = parseFloat(data.weight) / 10;
+        var height = parseFloat(data.height) / 10;
 
+        let exp = data.base_experience;
         if(data.types.length == 2){
-            var type = `${data.types[0].type.name}, ${data.types[1].type.name}`;
+            var type = `${data.types[0].type.name[0].toUpperCase()}${data.types[0].type.name.slice(1)}‏‏‎‏‏‎, ${data.types[1].type.name[0].toUpperCase()}${data.types[1].type.name.slice(1)}`;
         }
         else{
-            var type = `${data.types[0].type.name}`;
+            var type = `${data.types[0].type.name[0].toUpperCase()}${data.types[0].type.name.slice(1)}`;
         }
 
-        if(data.abilities.length == 2){
-            var ability = `${data.abilities[0].ability.name}, ${data.abilities[1].ability.name}`;
+        if(data.abilities.length >= 2){
+            var ability = ``;
+            for(let i = 0; i < data.abilities.length; i++){
+                
+                if(i == data.abilities.length-1){
+                    ability += `${data.abilities[i].ability.name[0].toUpperCase()}${data.abilities[i].ability.name.slice(1)}(hidden ability)`
+                }
+                else{
+                    ability += `${data.abilities[i].ability.name[0].toUpperCase()}${data.abilities[i].ability.name.slice(1)}, `
+                }
+            }
         }
         else{
-            var ability = `${data.abilities[0].ability.name}`;
+            var ability = `${data.abilities[0].ability.name[0].toUpperCase()}${data.abilities[0].ability.name.slice(1)}`;
         }
         var data1 = [
             {x: "Speed", value: speed},
@@ -43,7 +55,7 @@ fetch(url)
         // set chart yScale settings
         chart.yScale()
             .minimum(1)
-            .maximum(200)
+            .maximum(150)
             .ticks({'interval':40});
         
         // color alternating cells
@@ -59,6 +71,22 @@ fetch(url)
         console.log(data.sprites.other["official-artwork"].front_default);
         var y = `<img class="center-sprite" src=${data.sprites.other["official-artwork"].front_default} alt="sprite">`;
         $('section').prepend(y);
-        $('section').append(`<div><h1><b>Pokédex data</b></h1><div>National No.: ${data.id}</div><div>Type(s):  ${type}</div><div>Abilities: ${ability}</div></div>`);
+        $('section').append(`<div><h1><b>Pokédex data</b></h1><hr><table><tbody><tr>National №‏‏‎‏‏‎ ‎ <b>${data.id}</b></tr><hr><tr>Type(s)‏‏‎‏‏‎ ‎ ‎${type}‏‏‎‏‏‎ ‎</tr><hr><tr>Height‏‏‎‏‏‎ ‎ ${height} m</tr><hr><tr>Weight‏‏‎‏‏‎ ‎ ${weight} kg</tr><hr><tr>Abilities‏‏‎‏‏‎ ‎ ${ability}</tr><hr></tbody></table></div>`);
+        fetch(`https://pokeapi.co/api/v2/pokemon-species/${data.id}/`)
+        .then(response => response.json()) 
+        .then(function(data){
+            console.log(data.egg_groups[0]);
+            
+            if(data.egg_groups.length == 2){
+                var egg_group = `${data.egg_groups[0].name[0].toUpperCase()}${data.egg_groups[0].name.slice(1)}‏‏‎‏‏‎, ${data.egg_groups[1].name[0].toUpperCase()}${data.egg_groups[1].name.slice(1)}`;
+            }
+            else if(data.egg_groups.length == 1){
+                var egg_group = `${data.egg_groups[0].name[0].toUpperCase()}${data.egg_groups[0].name.slice(1)}`;
+            }
+            else{
+                var egg_group = `Undiscovered`;
+            }
+            $('section').append(`<div><h1><b>Training</b></h1><hr><table><tbody><tr>Catch rate ‎ ${data.capture_rate}%</tr><hr><tr>Base Friendship‏‏‎‏‏‎ ‎ ‎${data.base_happiness}‏‏‎‏‏‎ ‎</tr><hr><tr>Base Exp. ‎ ${exp}</tr><hr><h1><b>Breeding</b></h1><tr>Egg Groups ‎ ${egg_group}</tr><hr><tr>Egg cycles ‎ ${data.hatch_counter}</tr><hr></tbody></table></div>`);
         });
     });
+});

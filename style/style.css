@@ -127,11 +127,30 @@ header {
 .center-sprite{
     width:30%;
     height:auto;
+    margin:50px;
 }
 .pokeborder{
-    border: 5px solid  rgb(182, 167, 101);
     display:flex;
     align-items: center;
     justify-content: center;
-    
+}
+.type{
+    display:flex;
+    flex-direction: row;
+}
+hr{
+    margin:6px;
+}
+table{
+    font-family: "Fira Sans","Trebuchet MS",Ubuntu,Helvetica,Arial,sans-serif;
+    margin: 0 auto 1rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+tbody{
+    display: table-row-group;
+    vertical-align: middle;
+}
+div{
+    margin:20px;
 }
