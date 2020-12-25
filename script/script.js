@@ -95,7 +95,7 @@ $(function () { //shorthand for jquery document ready
                         var p = `<li class=pokebox><p>‏‏‎‏‏‎ ‎ ${id}. ${mname}</p><p><a href="pages/pokestats.html"><img src=${data.sprites.front_default} alt="sprite"></a></p></li>`
                         $('ul').after(p);
                         localStorage.setItem('pokemon', JSON.stringify(pokemon));
-                    })
+                    });
                 });
             });
         });

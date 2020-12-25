@@ -60,5 +60,5 @@ fetch(url)
         var y = `<img class="center-sprite" src=${data.sprites.other["official-artwork"].front_default} alt="sprite">`;
         $('section').prepend(y);
         $('section').append(`<div><h1><b>Pokédex data</b></h1><div>National No.: ${data.id}</div><div>Type(s):  ${type}</div><div>Abilities: ${ability}</div></div>`);
-        })
+        });
     });
