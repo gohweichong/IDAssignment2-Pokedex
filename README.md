@@ -6,7 +6,7 @@ With so many pokémon in this day and age, with 151 in the 1st generation and no
  
 ## Design Process
  
-For the design process, as the user types are either users who want to know more about a particular pokémon or have only played a certin amount of pokémon games, I wanted the search page to be simple and clear so new users will easily know how to use the website and not get confused. Hence I made a layout with reference to the pokédex example shown in Week 9 mel slides, starting with the regions to select from, and then the ID based on the region or the name of the pokémon. When the search button is pressed it will show a pixel art of the pokémon searched for with the name and ID. After pressing on the pokémon, it will switch to another page to show all the informtion about the searched pokémon. Also, with the new generation of pokémon added to the api but the regional pokédex was not created in the api yet, I decided to create a choice for the national pokédex to search for the newest genearion pokémons.
+For the design process, as the user types are either users who want to know more about a particular pokémon or have only played a certin amount of pokémon games, I wanted the search page to be simple and clear so new users will easily know how to use the website and not get confused. Hence I made a layout with reference to the pokédex example shown in Week 9 mel slides, starting with the regions to select from, and then the ID based on the region or the name of the pokémon. When the search button is pressed it will show a pixel art of the pokémon searched for with the name and ID. After pressing on the pokémon, it will switch to another page to show all the informtion about the searched pokémon. Also, with the new generation of pokémon added to the api but the regional pokédex was not created in the api yet, I decided to create a choice for the national pokédex to search for the newest genearion pokémons. The pokemon's stats will be shown with a radar chart instead of a bar chart as I enjoy the look of the radar chart and that the showing of pokemons stats in a radar chart has been used before in a pokemon game (Pokemon X and Y).
 
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. 
 These files should themselves either be included as a pdf file in the project itself (in an separate directory)
@@ -36,19 +36,12 @@ In this section, you should go over the different parts of your project, and des
 
 ## Testing
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+- Home Page - The page has a header with the pokemon logo on the top to distinctively show that this website is about pokemon. The background of the whole website is mainly a pokeball pattern background, and the first for that is needed to input is the region form where the user will choose the region pokemon to choose from. The region form has a background which is the alola region to represent that the form is about regions. After this, the user will input the ID or the name of the pokemon so that the website can search for it. There is a submit button to search for it and a clear button to clear the pokemon the users have searched for.
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+- Pokemon information page - This page will show off the main information the users will need about the pokemon, the heading is the same. The pokemon logo can be pressed to go back to the home page to search for another pokemon. The background is completely white and the page will show a image of the pokemon and below will show the stats of the pokemon using a radar chart.
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+## Bugs
+- Only a few small bugs that have not been fixed, when the pokemon is searched for, the image comes out fine but the background will stretch till the end of the page so I will need to find a way to change the background width.
 
 ## Credits
 
