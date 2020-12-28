@@ -30,7 +30,7 @@ header {
     background-size: cover;
 }
 
-.region-box{
+.region-title{
     color:rgb(255, 255, 255);
     text-align: center;
 }
@@ -104,11 +104,14 @@ header {
     list-style-type: none;
     border: 5px solid  rgb(24, 22, 22);
     border-radius: 25px;
+    width: 9.5%;
+    margin:2px;
 }
 
 .dcontainer{
     display:flex;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 .icontainer{
     display:flex;
@@ -153,4 +156,24 @@ tbody{
 }
 div{
     margin:20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .pokeborder{
+        flex-direction: column;
+    }
+    .center-sprite{
+        width:300px;
+    }
+    .form-control{
+        width:103%;
+    }
+    .pokebox{
+        background-color:bisque;
+        list-style-type: none;
+        border: 5px solid  rgb(24, 22, 22);
+        border-radius: 25px;
+        width: 40%;
+        margin:2px;
+    }
 }

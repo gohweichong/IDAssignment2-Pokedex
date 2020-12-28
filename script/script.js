@@ -93,7 +93,7 @@ $(function () { //shorthand for jquery document ready
                         console.log(ability);
                      
                         var p = `<li class=pokebox><p>‏‏‎‏‏‎ ‎ ${id}. ${mname[0].toUpperCase()}${mname.slice(1)}</p><p><a href="pages/pokestats.html"><img src=${data.sprites.front_default} alt="sprite"></a></p></li>`
-                        $('ul').after(p);
+                        $('ul').append(p);
                         localStorage.setItem('pokemon', JSON.stringify(pokemon));
                     });
                 });
@@ -105,5 +105,7 @@ $(function () { //shorthand for jquery document ready
     $(".clear").on('click',function (event) {
         event.preventDefault();
         $('.pokebox').remove();
+        document.getElementById('search').value = '';
+        document.querySelector('input[name="inlineRadioOptions"]:checked').checked = false;
     });
 });
