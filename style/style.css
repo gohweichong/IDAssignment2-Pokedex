@@ -104,7 +104,8 @@ header {
     list-style-type: none;
     border: 5px solid  rgb(24, 22, 22);
     border-radius: 25px;
-    width: 9.5%;
+    width: auto;
+    height:100%;
     margin:2px;
 }
 
@@ -157,6 +158,10 @@ tbody{
 div{
     margin:20px;
 }
+.pokeimg{
+    width:auto;
+    height:auto;
+}
 
 @media only screen and (max-width: 600px) {
     .pokeborder{
@@ -175,5 +180,10 @@ div{
         border-radius: 25px;
         width: 40%;
         margin:2px;
+    }
+    .background{
+        background-image: url('../images/pokeball-background.jpg');
+        background-attachment: fixed;
+        background-size: 100% 100%;
     }
 }

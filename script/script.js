@@ -92,9 +92,14 @@ $(function () { //shorthand for jquery document ready
                         console.log(type);
                         console.log(ability);
                      
-                        var p = `<li class=pokebox><p>‏‏‎‏‏‎ ‎ ${id}. ${mname[0].toUpperCase()}${mname.slice(1)}</p><p><a href="pages/pokestats.html"><img src=${data.sprites.front_default} alt="sprite"></a></p></li>`
+                        var p = `<li class=pokebox><p>‏‏‎‏‏‎ ‎ ${id}. ${mname[0].toUpperCase()}${mname.slice(1)} ‎ </p><p><a href="pages/pokestats.html" target="_blank"><img src=${data.sprites.front_default} alt="sprite" class="pokeimg" value=${id} /></a></p></li>`
                         $('ul').append(p);
                         localStorage.setItem('pokemon', JSON.stringify(pokemon));
+
+                        $(".pokeimg").on('click',function (events) {
+                            var ids = document.getElementsByClassName("pokeimg");
+                            console.log($(ids).attr("value"));
+                        });
                     });
                 });
             });
