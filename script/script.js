@@ -97,8 +97,10 @@ $(function () { //shorthand for jquery document ready
                         localStorage.setItem('pokemon', JSON.stringify(pokemon));
 
                         $(".pokeimg").on('click',function (events) {
-                            var ids = document.getElementsByClassName("pokeimg");
-                            console.log($(ids).attr("value"));
+                            console.log($(this).attr("value"));
+                            url4 = `https://pokeapi.co/api/v2/pokemon/${$(this).attr("value")}/`;
+                            localStorage.setItem('url', url4);
+
                         });
                     });
                 });
