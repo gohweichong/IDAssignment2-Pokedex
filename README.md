@@ -8,9 +8,7 @@ With so many pokémon in this day and age, with 151 in the 1st generation and no
  
 For the design process, as the user types are either users who want to know more about a particular pokémon or have only played a certin amount of pokémon games, I wanted the search page to be simple and clear so new users will easily know how to use the website and not get confused. Hence I made a layout with reference to the pokédex example shown in Week 9 mel slides, starting with the regions to select from, and then the ID based on the region or the name of the pokémon. When the search button is pressed it will show a pixel art of the pokémon searched for with the name and ID on a different tab, that way users can search for different pokemon and compare stats or other information between different pokemon on separate tabs. After pressing on the pokémon, it will switch to another page to show all the informtion about the searched pokémon. Also, with the new generation of pokémon added to the api but the regional pokédex was not created in the api yet, I decided to create a choice for the national pokédex to search for the newest genearion pokémons. The pokemon's stats will be shown with a radar chart instead of a bar chart as I enjoy the look of the radar chart and that the showing of pokemons stats in a radar chart has been used before in a pokemon game (Pokemon X and Y). 
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. 
-These files should themselves either be included as a pdf file in the project itself (in an separate directory)
-Include the Adobe XD wireframe as a folder. You can include the XD share url. 
+My wireframe link is [here](https://xd.adobe.com/view/daf59ceb-0524-4882-8b15-2af24d2fe75d-8fa6/)
 
 ## Features
  
