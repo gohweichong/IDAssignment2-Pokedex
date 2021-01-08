@@ -4,9 +4,23 @@ I have always wanted to create a game website that helps others provide a certai
 
 With so many pokémon in this day and age, with 151 in the 1st generation and now over 890 with its latest new generation, many can even remember all the pokémon there are now much less the information about each and every pokémon. There are also users who are playing a pokemon game that want to search up information about their team or want to compare stats or other information between other pokemon. With this situation, I decided to create a pokédex that can search for any pokemon based on name, region and ID number. This will help to allow any user to search for the information for the pokémon and learn more about them. 
  
-## Design Process
- 
+## Design 
+
+### Design Process
+
 For the design process, as the user types are either users who want to know more about a particular pokémon or have only played a certin amount of pokémon games, I wanted the search page to be simple and clear so new users will easily know how to use the website and not get confused. Hence I made a layout with reference to the pokédex example shown in Week 9 mel slides, starting with the regions to select from, and then the ID based on the region or the name of the pokémon. When the search button is pressed it will show a pixel art of the pokémon searched for with the name and ID on a different tab, that way users can search for different pokemon and compare stats or other information between different pokemon on separate tabs. After pressing on the pokémon, it will switch to another page to show all the informtion about the searched pokémon. Also, with the new generation of pokémon added to the api but the regional pokédex was not created in the api yet, I decided to create a choice for the national pokédex to search for the newest genearion pokémons. The pokemon's stats will be shown with a radar chart instead of a bar chart as I enjoy the look of the radar chart and that the showing of pokemons stats in a radar chart has been used before in a pokemon game (Pokemon X and Y). 
+
+### Fonts
+#### Home Page
+- The font used for the word region is a LCT Picon Semi bold by LCT
+- The font used for the names of the region is a URW Grotesk SC Regular by URW Type Foundry
+- The font used for the words in the submit and clear button is a Fact Narrow by ParaType
+
+#### Pokemon Data Page
+- The font used for the titles of each header is a LCT Picon Bold by LCT
+- The font used for the words within the table is a Iwata UD Gothic Text Pro Regular by IWATA
+
+### Wireframe
 
 My wireframe link is [here](https://xd.adobe.com/view/daf59ceb-0524-4882-8b15-2af24d2fe75d-8fa6/)
 
