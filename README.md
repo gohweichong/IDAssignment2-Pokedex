@@ -68,3 +68,4 @@ My wireframe link is [here](https://xd.adobe.com/view/daf59ceb-0524-4882-8b15-2a
 ### Acknowledgements
 
 - I received great inspiration for the layout design of pokémon information for this project from [PokémonDB](https://pokemondb.net/)
+- Mel had a slide that showed a person who made a pokedex that inspired me to create one as well
