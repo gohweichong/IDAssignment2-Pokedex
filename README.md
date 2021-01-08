@@ -40,7 +40,7 @@ My wireframe link is [here](https://xd.adobe.com/view/daf59ceb-0524-4882-8b15-2a
     - The project uses **PokéAPI** to get all information about every pokémon.
 - Visual Studio Code was the app I used to create my website.
 
-### Techniques
+### Techniques and Libraries
 - HTML - My HTML page links to a [bootstrap](https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js), [JQuery](https://code.jquery.com/jquery-3.5.1.slim.min.js) and [Radar graphs](https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js) to allow the website to use classes in bootstrap in my website and allow my Javascripts to use JQuery to simplify coding.
 
 - Javascript - My Javascript makes use of JQuery, fetch, classes, localstorage and radar graphs. JQuery makes retrieving of classes much faster and the fetch code allows me to fetch an API to retrieve the content within it. The making of classes help to contain the stats and abilities of pokemon within the class and the localstorage helps to store the class of the pokemon and several urls that can be retrieved later on. Radar graphs were used to show off the stats of the pokemon rather than using a bar graph.
