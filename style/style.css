@@ -172,7 +172,9 @@ div{
         flex-direction: column;
     }
     .center-sprite{
-        width:300px;
+        width:310px;
+        border:0px;
+        margin:0px;
     }
     .form-control{
         width:103%;
