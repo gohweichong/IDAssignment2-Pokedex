@@ -1,11 +1,4 @@
-.background{
-    background-image: url('../images/pokeball-background.jpg');
-    background-attachment: fixed;
-    background-size: 50% 100%;
-}
-.background2{
-    background-color: rgb(255, 255, 255);
-}
+/*General*/
 header {
     background-image: url('../images/pokemon-background.jpg');
     background-attachment: fixed;
@@ -20,8 +13,37 @@ header {
     margin-right: auto;
 }
 
+hr{
+    margin:6px;
+}
+
 .heading{
     border: 10px solid  rgb(163, 110, 110);
+}
+
+.container{
+    padding-right: 0px;
+}
+
+table{
+    font-family: "Fira Sans","Trebuchet MS",Ubuntu,Helvetica,Arial,sans-serif;
+    margin: 0 auto 1rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+tbody{
+    display: table-row-group;
+    vertical-align: middle;
+}
+div{
+    margin:20px;
+}
+
+/*Home Page*/
+.background{
+    background-image: url('../images/pokeball-background.jpg');
+    background-attachment: fixed;
+    background-size: 50% 100%;
 }
 
 .region-box{
@@ -33,10 +55,6 @@ header {
 .region-title{
     color:rgb(255, 255, 255);
     text-align: center;
-}
-
-.container{
-    padding-right: 0px;
 }
 
 .form-check-label1{
@@ -87,6 +105,7 @@ header {
     border-radius: 5px;
     display: block;
 }
+
 .form-control{
     border: 5px solid  rgb(163, 110, 110);
     height:50px;
@@ -96,6 +115,7 @@ header {
     margin-right: auto;
     height:auto;
 }
+
 .btn-primary{
     display: block;
     margin-left: auto;
@@ -132,6 +152,11 @@ header {
     color:white;
     background-color:rgb(46, 118, 167);
 }
+/*Pokestats Page*/
+.background2{
+    background-color: rgb(255, 255, 255);
+}
+
 .center-sprite{
     width:30%;
     height:auto;
@@ -146,38 +171,15 @@ header {
     display:flex;
     flex-direction: row;
 }
-hr{
-    margin:6px;
-}
-table{
-    font-family: "Fira Sans","Trebuchet MS",Ubuntu,Helvetica,Arial,sans-serif;
-    margin: 0 auto 1rem;
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-tbody{
-    display: table-row-group;
-    vertical-align: middle;
-}
-div{
-    margin:20px;
-}
 .pokeimg{
     width:auto;
     height:auto;
 }
 
 @media only screen and (max-width: 600px) {
+    /*Home Page*/
     .pokeborder{
         flex-direction: column;
-    }
-    .center-sprite{
-        width:310px;
-        border:0px;
-        margin:0px;
-    }
-    .form-control{
-        width:103%;
     }
     .pokebox{
         background-color:bisque;
@@ -194,5 +196,15 @@ div{
     }
     .region-title{
         color:black
+    }
+
+    /*Pokestats Page*/
+    .center-sprite{
+        width:310px;
+        border:0px;
+        margin:0px;
+    }
+    .form-control{
+        width:103%;
     }
 }
